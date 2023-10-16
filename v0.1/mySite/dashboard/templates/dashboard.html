@@ -1,0 +1,19 @@
+<!--EXTEND FILE: '_base.html'-->
+{% extends 'shared/_base.html' %}
+
+<!--SET BROWSER TAB TITLE-->
+{% block title %}DASHBOARD - AIEnhanced{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="d-flex gap-2 align-items-center justify-content-center">
+    
+</div>
+{% else %}
+<div class="d-flex gap-2 align-items-center justify-content-center">
+    <p class="fs-4 text-danger">You must be logged in to continue...</p>
+    <a class="btn btn-secondary btn-outline-info" href="#0">LOGIN</a>
+    <a class="btn btn-secondary btn-outline-info" href="#0">SIGN UP</a>
+</div>
+{% endif %}
+{% endblock %}
