@@ -1,0 +1,21 @@
+<!--EXTEND FILE: '_base.html'-->
+{% extends 'shared/_base.html' %}
+
+<!--SET BROWSER TAB TITLE-->
+{% block title %}GRASP PDF - GraspAI{% endblock %}
+
+{% block content %}
+    <div class="d-flex gap-2 justify-content-center align-items-center">
+        {% if content %}
+            <h4>YOUR SUMMARY:</h4><br>
+            <p>{{ content }}</p>
+        {% else %}
+            <form method="post" enctype="multipart/form-data" action="{% url 'dashboard:grasp-pdf' %}">
+                {% csrf_token %}
+                <label for="pdf_file">Select a PDF file:</label>
+                <input type="file" name="pdf_file" id="pdf_file">
+                <input type="submit" value="Upload">
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

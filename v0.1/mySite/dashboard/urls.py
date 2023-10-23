@@ -7,7 +7,9 @@ app_name = 'dashboard'
 
 # URL Paths Resolved within the list: 'urlpatterns'
 urlpatterns = [
-    path('', views.dashboard, name='dashboard'),
+    path('', views.landing_redirect, name='welcome'),
+    path('dashboard/', views.dashboard, name='home'),
+    path('grasp-pdf/', views.upload_pdf, name='grasp-pdf')
 ]
 
 '''
