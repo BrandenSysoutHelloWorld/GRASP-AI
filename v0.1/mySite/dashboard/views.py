@@ -25,10 +25,11 @@ def upload_pdf(request):
         num_pages = len(pdf_reader.pages)
         i = 0
         content = []
+
         text = pdf_reader.pages[1]            
         doc = nlp(text.extract_text())
 
-        # Create a list of sentences and exclude stopwords
+        # Exclude stopwords... What ever that means?
         sentences = [sent for sent in doc.sents if sent.text not in STOP_WORDS]
 
         # Calculate the term frequency of words
@@ -50,4 +51,3 @@ def upload_pdf(request):
         return render(request, 'upload_pdf.html', {'content': summary})
     else:
         return render(request, 'upload_pdf.html')
-
