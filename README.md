@@ -1,5 +1,6 @@
-# Planning and Design
-*Project Title: Grasp-AI*
+# GRASP AI
+> Prototype v0.1
+
 Grasp-AI is an intuitive platform that leverages Artificial Intelligence to offer comprehensive insights into complex documents. This versatile platform serves dual purposes, 
 offering both concise document summarization and swift, precise document search capabilities. Users can effortlessly query their documents, which will be seamlessly integrated 
 with a state-of-the-art Natural Language Processing Model.
